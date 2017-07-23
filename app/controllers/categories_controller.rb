@@ -26,6 +26,13 @@ class CategoriesController < ApplicationController
     end
   end
 
+  protected  
+    def resource_not_found
+      message = "A categoria não foi encontrada" 
+      flash[:alert] = message
+      render "pages/404", status: 404
+    end
+
   private
 
     def params_category
