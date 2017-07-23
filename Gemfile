@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
@@ -52,6 +53,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard'
+  gem 'guard-rspec' 
+  gem 'guard-cucumber'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
