@@ -1,0 +1,21 @@
+<h1>Edit category</h1>
+
+<div class="row">
+  <div class="col-md-12">
+    
+    <% @category.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger" role="alert"><%= message %></div>
+    <% end %>
+
+
+    <%= form_for @category, class: "form-horizontal" do |f| %>
+      <%= f.label :name, "Nome" %>
+      <%= f.text_field :name %> <br>
+
+      <%= f.label :opening_balance, "Saldo inicial" %>
+      <%= f.text_field :opening_balance, step: 2 %>
+
+      <%= f.submit "Criar categoria" %>
+    <% end %>
+  </div>
+</div>
